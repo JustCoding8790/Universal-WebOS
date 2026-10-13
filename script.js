@@ -5,8 +5,28 @@
 }
 setInterval(updateTime, 1000);
 
+var welcomeScreen = document.querySelector("#welcome")
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
+
+function openWindow(element) {
+  element.style.display = "flex"
+}
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
