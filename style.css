@@ -1,0 +1,40 @@
+.selected {
+    background-color: #a74efa88;
+    border: 16px;
+    border-radius: 8px;
+    outline: 2px solid white;
+    width: 100%;
+    height: 100%;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-radius: 64px;
+    background-color: #211132;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 75%;
+    overflow-y: auto;
+}
+
+.windowheader {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    padding: 16px;
+    gap: 16px;
+    cursor: grab;
+    align-items: center;
+    position: sticky;
+    top: 0
+}
+
+.closebutton {
+    display: flex;
+    justify-content: flex-end
+}

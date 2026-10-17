@@ -2,16 +2,18 @@
 <html>
   <head>
     <style>
-    #welcome {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    #welcome::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
+      #welcome {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      #welcome::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body style="margin: 0; padding: 0; background-image: url(images/starrywallpaper.png); background-size: cover; color: white; padding: 2px; font-family: 'Andale Mono', 'Consolas', 'Courier New', monospace">
+  <body id="top" style="margin: 0; padding: 0; background-image: url(images/starrywallpaper.png); background-size: cover; color: white; padding: 2px; font-family: 'Andale Mono', 'Consolas', 'Courier New', monospace">
     <div style="position: absolute; display: flex; bottom: 0; justify-content: space-between; background-color: rgba(17, 0, 56, 0.75); width: 100%">
         <p style="margin-left: 32px">
             UniversalOS
@@ -20,16 +22,22 @@
             Loading...
         </p>
     </div>
-    <p id="welcomeopen" style="cursor: pointer; margin-left: 32px; padding: 64px">
-      <img src="images/Universal Existence App Icon.png" width="64" height="64" style="border: solid; border-radius: 16px; border-width: 2px">
-    </p>
-    <div id="welcome" style="display: flex; flex-direction: column; border: solid; border-radius: 64px; background-color: #211132; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; height: 75%; overflow-y: auto;">
-      <div id="welcomeheader" style="display: flex; justify-content: space-between; margin-left: 8px; padding: 16px; gap: 16px; cursor: grab; align-items: center; position: sticky; top: 0">
+    <div id="desktopapps" style="display: flex; flex-direction: column; gap: 16px; padding: 64px">
+      <div id="welcomeopen" style="display: flex; flex-direction: column; align-items: center; cursor: pointer; margin-left: 32px; margin-right: 32px; padding: 8px; width: 96px; height: 128px;">
+        <img src="images/aboutueicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
+        <p style="text-align: center">About UE</p>
+      </div>
+      <div id="notebookopen" style="display: flex; flex-direction: column; align-items: center; cursor: pointer; margin-left: 32px; margin-right: 32px; padding: 8px; width: 96px; height: 128px;">
+        <img src="images/naturalnotebookicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
+        <p style="text-align: center">Natural Notebook</p>
+      </div>
+    <div class="window" id="welcome">
+      <div class="windowheader" id="welcomeheader">
         <div style="display: flex; align-items: center; gap: 16px;"> 
-          <img src="images/Universal Existence App Icon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px">
-          Welcome Screen
+          <img src="images/aboutueicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px">
+          About Universal Existence (Scrollable)
         </div>
-        <p id="welcomeclose" style="display: flex; justify-content: flex-end">
+        <p class="closebutton" id="welcomeclose">
           <img src="images/universalos_close_button.png" width="32px" height="32px" style= "border: solid; border-radius: 64px; border-width: 2px; cursor: pointer; margin: 0">
         </p>
       </div>
@@ -37,11 +45,21 @@
       <h2 style="margin: 32px">What is Universal Existence?</h2>
       <p style="margin: 32px">It's a 2D platformer containing plenty of mechanics that'll freshen up every level (and soon enough, funny voice lines). You can go from firing bullets at enemies to raving at a deadly disco party and even fighting for your life in a full-on tower defense! So much to do in a platforming course...</p>
       <p style="margin: 32px">Don't worry, each mechanic will also be expanded upon so you get to see the expansion of your favorite mechanics!</p>
-      <a style="color: rgb(138, 163, 255); margin: 32px; padding: 2px" href="discord.com">Official UE Discord Server</a>
+      <p style="margin: 32px">The game's demo is currently in V1, with the first area of the game: Natural Plains, with all levels/difficulties and extra speedrun options in settings (press Esc on keyboard or the Menu button on controller).</p>
+      <a style="color: rgb(138, 163, 255); margin: 32px; padding: 2px" href="https://justcoding8790.itch.io/universal-existence">Play Now on Itch.io</a>
       <br>
       <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
     </div>
-    <script src="script.js"></script>
+    <div class="window" id="notebook" style="display: none; background-color:rgb(68, 150, 86)">
+      <div class="windowheader" id="notebookheader">
+        <div style="display: flex; align-items: center; gap: 16px;"> 
+          <img src="images/naturalnotebookicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px">
+          Natural Notebook
+        </div>
+        <p class="closebutton" id="notebookclose">
+          <img src="images/universalos_close_button.png" width="32px" height="32px" style= "border: solid; border-radius: 64px; border-width: 2px; cursor: pointer; margin: 0">
+        </p>
+      </div>
   </body>
 
 </html>

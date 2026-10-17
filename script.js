@@ -5,23 +5,81 @@
 }
 setInterval(updateTime, 1000);
 
-var welcomeScreen = document.querySelector("#welcome")
-var welcomeScreenOpen = document.querySelector("#welcomeopen")
-var welcomeScreenClose = document.querySelector("#welcomeclose")
+var biggestIndex = 0;
+var selectedIcon = undefined
+var bottombar = document.querySelector("#top");
 
-// Make the DIV element draggable:
-dragElement(document.getElementById("welcome"));
+var welcomeScreen = document.querySelector("#welcome");
+var welcomeScreenOpen = document.querySelector("#welcomeopen");
+var welcomeScreenClose = document.querySelector("#welcomeclose");
+var notebook = document.querySelector("#notebook");
+var notebookOpen = document.querySelector("#notebookopen");
+var notebookClose = document.querySelector("#notebookclose");
+
+// Selecting icons
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+}
+
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined
+}
+
+function handleIconTap(element, window) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element);
+    openWindow(window);
+  } else {
+    if (selectedIcon != undefined) {
+      deselectIcon(selectedIcon);
+    }
+    selectIcon(element);
+  }
+}
+
+welcomeScreenOpen.addEventListener("click", function() {
+  handleIconTap(welcomeScreenOpen, welcomeScreen);
+});
+
+notebookOpen.addEventListener("click", function() {
+  handleIconTap(notebookOpen, notebook);
+});
 
 welcomeScreenClose.addEventListener("click", function() {
   closeWindow(welcomeScreen);
 });
 
-welcomeScreenOpen.addEventListener("click", function() {
-  openWindow(welcomeScreen);
+notebookClose.addEventListener("click", function() {
+  closeWindow(notebook);
 });
 
+// Moving windows to top
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  taskbar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon);
+}
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+addWindowTapHandling(welcomeScreen);
+addWindowTapHandling(notebook);
+
+// Make the DIV element draggable:
+dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector("#notebook"));
+
 function openWindow(element) {
-  element.style.display = "flex"
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  taskbar.style.zIndex = biggestIndex + 1;
 }
 
 function closeWindow(element) {
