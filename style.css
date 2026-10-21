@@ -25,13 +25,14 @@
 .windowheader {
     display: flex;
     justify-content: space-between;
-    margin-left: 8px;
+    width: 100%;
+    height: 20%;
     padding: 16px;
+    border-radius: 64px 64px 0 0;
     gap: 16px;
     cursor: grab;
     align-items: center;
     position: sticky;
-    top: 0
 }
 
 .closebutton {
