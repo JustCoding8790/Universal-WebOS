@@ -9,6 +9,13 @@
       #welcome::-webkit-scrollbar {
         display: none;
       }
+      #notebook {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      #notebook::-webkit-scrollbar {
+        display: none;
+      }
     </style>
     <script type="module" src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -41,25 +48,63 @@
           <img src="images/universalos_close_button.png" width="32px" height="32px" style= "border: solid; border-radius: 64px; border-width: 2px; cursor: pointer; margin: 0">
         </p>
       </div>
-      <h1 style="color: rgb(188, 122, 255); margin: 32px">Welcome to Universal OS</h1>
-      <h2 style="margin: 32px">What is Universal Existence?</h2>
-      <p style="margin: 32px">It's a 2D platformer containing plenty of mechanics that'll freshen up every level (and soon enough, funny voice lines). You can go from firing bullets at enemies to raving at a deadly disco party and even fighting for your life in a full-on tower defense! So much to do in a platforming course...</p>
-      <p style="margin: 32px">Don't worry, each mechanic will also be expanded upon so you get to see the expansion of your favorite mechanics!</p>
-      <p style="margin: 32px">The game's demo is currently in V1, with the first area of the game: Natural Plains, with all levels/difficulties and extra speedrun options in settings (press Esc on keyboard or the Menu button on controller).</p>
-      <a style="color: rgb(138, 163, 255); margin: 32px; padding: 2px" href="https://justcoding8790.itch.io/universal-existence">Play Now on Itch.io</a>
+      <h1 style="color: rgb(188, 122, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">Welcome to Universal OS</h1>
+      <h2 style="margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">What is Universal Existence?</h2>
+      <p style="margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">It's a 2D platformer containing plenty of mechanics that'll freshen up every level (and soon enough, funny voice lines). You can go from firing bullets at enemies to raving at a deadly disco party and even fighting for your life in a full-on tower defense! So much to do in a platforming course...</p>
+      <p style="margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">Don't worry, each mechanic will also be expanded upon so you get to see the expansion of your favorite mechanics!</p>
+      <p style="margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">The game's demo is currently in V1, with the first area of the game: Natural Plains, with all levels/difficulties and extra speedrun options in settings (press Esc on keyboard or the Menu button on controller).</p>
+      <a style="color: rgb(138, 163, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 32px; padding: 2px" href="https://justcoding8790.itch.io/universal-existence">Play Now on Itch.io</a>
       <br>
-      <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
+      <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
     </div>
-    <div class="window" id="notebook" style="display: none; background-color:rgb(68, 150, 86)">
+    <div class="window" id="notebook" style="background-color:rgb(68, 150, 86)">
       <div class="windowheader" id="notebookheader">
         <div style="display: flex; align-items: center; gap: 16px;"> 
           <img src="images/naturalnotebookicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px">
-          Natural Notebook
+          Natural Notebook (Scrollable)
         </div>
         <p class="closebutton" id="notebookclose">
           <img src="images/universalos_close_button.png" width="32px" height="32px" style= "border: solid; border-radius: 64px; border-width: 2px; cursor: pointer; margin: 0">
         </p>
       </div>
-  </body>
-
+      <div id="voidentry" style="display: none">
+        <h1 style="color: rgb(208, 158, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">Void Hub</h1>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">The Void Hub is the main center of the universe, which is directly connected to the 5 main locations of the universe. You can access the UPC (Universal Platforming Course) via a vortex, which is located near the outskirts of the Void Hub. The center of the Void Hub, also known as the center of the universe, contains the Heart, which expands this universe and protects it from collapsing. The Heart is fragile, however, which is why it is heavily secured by many traps.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">The Universal Center is the main place inside the Void Hub, where many trusted residents live peacefully and quietly, doing their work to help make the universe a better place. The Universal Center also contains the Universal Council, which consists of Domainus and a selected group of 5 that keep the universe stable and dispose of anything that may possibly threaten the Heart.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 8px">Typical Climate: Clear (Always Night)</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Temperature Range: 55-60 F° (13-16 C°)</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Current State: Secure</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 16px">Current Manager: Domainus</p>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="plainsentry" style="display: block">
+        <h1 style="color: rgb(100, 255, 108); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">Natural Plains</h1>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">Natural Plains is one of the main locations of the universe, although it's the smallest of the 5. Natural Plains is best known for being a relaxing place for isolated activities, such as camping, small parties, peaceful walks, fishing, and more. The area is most popular during the winter, when many go on "Snow Camps" together, celebrating during the holidays, and during the spring season, when it rains almost every day, with quiet hangouts/parties and "Group Rainwalks" being hosted. Natural Plains is also well-known for its summers providing the perfect conditions for fishing, especially for rare fish.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">The UPC version of Natural Plains is not anything like the universal Natural Plains, however. For training purposes, the simulated Mushrooms, Trunkwalkers, Plants, and Bees are all hostile, along with the invasive Snail species from Fantasy Isles. Spikes have also been placed around the uneven terrain, and a simulated hostile copy of Bee Good, head of the infamous Starlight Mafia, was created near the exit of the area. Natural Plains still keeps its small size and overall terrain, though, and is the least overwhelming compared to other UPC areas.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 8px">Typical Climate: Sunny</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Temperature Range: 65-70 F° (18-21 C°)</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Current State: Undisturbed</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 16px">Current Manager: Paloma</p>
+      </div>
+      <div id="coastentry" style="display: none">
+        <h1 style="color: rgb(100, 211, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">Casework Coast</h1>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">Casework Coast is one of the main locations of the universe, being the 2nd smallest area of the 5 when it comes to the main beach, but the largest when also considering the ocean, which is not a commonly visited place. Casework Coast's main signature event is the Universal TerraVolley Championships, where a game of 4v4 volleyball is played while players also have to platform across uneven terrain to hit the ball back to the other side. Casework Coast also has a pier for fishing, dining, and shopping, along with a place to sleep near the ocean waves, or even underwater. The area is most popular during the summer.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 32px">The UPC version of Casework Coast is somewhat like the universal Casework Coast, but is still far off, containing hostile Chamelons that were accidentally spilled into the wrong environment, with Domainus and the Universal Council failing to retrieve them due to their ability to blend in. Corrupted Rollvers from the real Casework Coast that used to search the ocean for resources, along with Shellies, have also been moved into the area. The Universal Council finds generating the water currents to be annoying, but it was done nevertheless.</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 32px; margin-bottom: 8px">Typical Climate: Sunny (Always Daytime)</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Temperature Range: 75-85 F° (24-29 C°)</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 8px">Current State: Undisturbed</p>
+        <p style="margin-left: 32px; margin-right: 32px; margin-top: 8px; margin-bottom: 16px">Current Manager: Felix </p>
+      </div>
+      <div class="notebookbuttons" style="display: flex; justify-content: flex-end; margin-left: 32px; margin-right: 32px; position: sticky; bottom: 0">
+        <div class="button" id="notebookbackbutton" style="display: flex; justify-content: center; align-items: center; background-color: rgb(100, 255, 108); width: 12%; height: 60%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+          <p style="text-align: center; color: black">Back</p>
+        </div>
+        <div class="button" id="notebooknextbutton" style="display: flex; justify-content: center; align-items: center; background-color: rgb(100, 255, 108); width: 12%; height: 60%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+          <p style="text-align: center; color: black">Next</p>
+        </div>
+    </div>
+    </body>
 </html>

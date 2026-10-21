@@ -12,9 +12,17 @@ var bottombar = document.querySelector("#top");
 var welcomeScreen = document.querySelector("#welcome");
 var welcomeScreenOpen = document.querySelector("#welcomeopen");
 var welcomeScreenClose = document.querySelector("#welcomeclose");
+
+var prevEntry = 1;
+var entryNum = 1;
 var notebook = document.querySelector("#notebook");
 var notebookOpen = document.querySelector("#notebookopen");
 var notebookClose = document.querySelector("#notebookclose");
+var notebookNextButton = document.querySelector("#notebooknextbutton")
+var notebookBackButton = document.querySelector("#notebookbackbutton")
+var voidEntry = document.querySelector("#voidentry")
+var plainsEntry = document.querySelector("#plainsentry")
+var coastEntry = document.querySelector("#coastentry")
 
 // Selecting icons
 function selectIcon(element) {
@@ -53,6 +61,56 @@ welcomeScreenClose.addEventListener("click", function() {
 
 notebookClose.addEventListener("click", function() {
   closeWindow(notebook);
+});
+
+// Natural Notebook Entry Management
+
+function changeEntry() {
+  if (prevEntry == 0) {
+    voidEntry.style.display = "none"
+  }
+  else if (prevEntry == 1) {
+    plainsEntry.style.display = "none"
+  }
+  else if (prevEntry == 2) {
+    coastEntry.style.display = "none"
+  }
+  if (entryNum == 0) {
+    voidEntry.style.display = "block"
+    notebook.style.backgroundColor = "rgb(106, 68, 150)"
+    notebookBackButton.style.backgroundColor = "rgb(208, 158, 255)";
+    notebookNextButton.style.backgroundColor = "rgb(208, 158, 255)";
+  }
+  else if (entryNum == 1) {
+    plainsEntry.style.display = "block"
+    notebook.style.backgroundColor = "rgb(68, 150, 86)"
+    notebookBackButton.style.backgroundColor = "rgb(100, 255, 108)";
+    notebookNextButton.style.backgroundColor = "rgb(100, 255, 108)";
+  }
+  else if (entryNum == 2) {
+    coastEntry.style.display = "block"
+    notebook.style.backgroundColor = "rgb(68, 110, 150)"
+    notebookBackButton.style.backgroundColor = "rgb(100, 211, 255)";
+    notebookNextButton.style.backgroundColor = "rgb(100, 211, 255)";
+  }
+}
+
+notebookNextButton.addEventListener("click", function() {
+  prevEntry = entryNum;
+  entryNum += 1;
+  if (entryNum > 2) {
+    entryNum = 0;
+  }
+  changeEntry();
+});
+
+notebookBackButton.addEventListener("click", function() {
+  prevEntry = entryNum;
+  entryNum -= 1;
+  if (entryNum < 0) {
+    entryNum = 2;
+  }
+  changeEntry();
 });
 
 // Moving windows to top
