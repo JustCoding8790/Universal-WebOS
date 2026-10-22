@@ -1,4 +1,4 @@
- function updateTime() {
+function updateTime() {
     var currentTime = new Date().toLocaleString();
     var timeText = document.querySelector("#TimeElement");
     timeText.innerHTML = currentTime
