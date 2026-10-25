@@ -9,20 +9,36 @@ var biggestIndex = 0;
 var selectedIcon = undefined
 var bottombar = document.querySelector("#top");
 
-var welcomeScreen = document.querySelector("#welcome");
-var welcomeScreenOpen = document.querySelector("#welcomeopen");
-var welcomeScreenClose = document.querySelector("#welcomeclose");
-
 var prevEntry = 1;
 var entryNum = 1;
-var notebook = document.querySelector("#notebook");
-var notebookOpen = document.querySelector("#notebookopen");
-var notebookClose = document.querySelector("#notebookclose");
 var notebookNextButton = document.querySelector("#notebooknextbutton")
 var notebookBackButton = document.querySelector("#notebookbackbutton")
 var voidEntry = document.querySelector("#voidentry")
 var plainsEntry = document.querySelector("#plainsentry")
 var coastEntry = document.querySelector("#coastentry")
+
+makeWindow("welcome")
+makeWindow("notebook")
+makeWindow("vorpet")
+
+// Making windows
+
+function makeWindow(windowName) {
+  var screen = document.querySelector("#" + windowName)
+  addWindowTapHandling(screen)
+  var screenClose = document.querySelector("#" + windowName + "close")
+  screenClose.addEventListener("click", function() {
+    closeWindow(screen);
+  });
+  dragElement(screen)
+  makeIcon(windowName)
+}
+
+function makeIcon(iconName) {
+  var icon = document.querySelector("#" + iconName + "open")
+  var screen = document.querySelector("#" + iconName)
+  icon.addEventListener("click", () => handleIconTap(icon, screen));
+}
 
 // Selecting icons
 function selectIcon(element) {
@@ -46,22 +62,6 @@ function handleIconTap(element, window) {
     selectIcon(element);
   }
 }
-
-welcomeScreenOpen.addEventListener("click", function() {
-  handleIconTap(welcomeScreenOpen, welcomeScreen);
-});
-
-notebookOpen.addEventListener("click", function() {
-  handleIconTap(notebookOpen, notebook);
-});
-
-welcomeScreenClose.addEventListener("click", function() {
-  closeWindow(welcomeScreen);
-});
-
-notebookClose.addEventListener("click", function() {
-  closeWindow(notebook);
-});
 
 // Natural Notebook Entry Management
 

@@ -16,6 +16,13 @@
       #notebook::-webkit-scrollbar {
         display: none;
       }
+      #vorpet {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      #vorpet::-webkit-scrollbar {
+        display: none;
+      }
     </style>
     <script type="module" src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -38,6 +45,10 @@
         <img src="images/naturalnotebookicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
         <p style="text-align: center">Natural Notebook</p>
       </div>
+      <div id="vorpetopen" style="display: none; flex-direction: column; align-items: center; cursor: pointer; margin-left: 32px; margin-right: 32px; padding: 8px; width: 96px; height: 128px;">
+        <img src="images/naturalnotebookicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
+        <p style="text-align: center">VorPet</p>
+      </div>
     <div class="window" id="welcome">
       <div class="windowheader" id="welcomeheader" style="background-color: rgb(188, 122, 255);">
         <div style="display: flex; align-items: center; gap: 16px;"> 
@@ -57,7 +68,7 @@
       <br>
       <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
     </div>
-    <div class="window" id="notebook" style="background-color:rgb(68, 150, 86);">
+    <div class="window" id="notebook" style="display: none; background-color:rgb(68, 150, 86);">
       <div class="windowheader" id="notebookheader" style="background-color: rgb(0, 92, 23);">
         <div style="display: flex; align-items: center; gap: 16px;"> 
           <img src="images/naturalnotebookicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px; margin-left: 8px;">
@@ -106,5 +117,19 @@
           <p style="text-align: center; color: black">Next</p>
         </div>
     </div>
-    </body>
+    </div>
+    <div class="window" id="vorpet" style="display: none">
+      <div class="windowheader" id="vorpetheader" style="background-color: rgb(188, 122, 255);">
+        <div style="display: flex; align-items: center; gap: 16px;"> 
+          <img src="images/aboutueicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px; margin-left: 8px">
+          VorPet (Scrollable)
+        </div>
+        <p class="closebutton" id="vorpetclose">
+          <img src="images/universalos_close_button.png" width="32px" height="32px" style="border: solid; border-radius: 64px; border-width: 2px; cursor: pointer; margin-right: 48px">
+        </p>
+      </div>
+      <h1 style="color: rgb(188, 122, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">VorPet Management</h1>
+      <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
+    </div>
+  </body>
 </html>

@@ -1,5 +1,4 @@
 # Universal-Existence-WebOS
-<br>
 A WebOS dedicated to Universal Existence, a 2d platformer game I've been working on. Explore through apps and learn about the origins of the universe, and maybe learn about what you'll encounter in the UPC when you enter...
 <br>
 <br>
