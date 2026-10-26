@@ -45,8 +45,8 @@
         <img src="images/naturalnotebookicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
         <p style="text-align: center">Natural Notebook</p>
       </div>
-      <div id="vorpetopen" style="display: none; flex-direction: column; align-items: center; cursor: pointer; margin-left: 32px; margin-right: 32px; padding: 8px; width: 96px; height: 128px;">
-        <img src="images/naturalnotebookicon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
+      <div id="vorpetopen" style="display: flex; flex-direction: column; align-items: center; cursor: pointer; margin-left: 32px; margin-right: 32px; padding: 8px; width: 96px; height: 128px;">
+        <img src="images/vorpeticon.png" width="64px" height="64px" style="border: solid; border-radius: 16px; border-width: 2px">
         <p style="text-align: center">VorPet</p>
       </div>
     <div class="window" id="welcome">
@@ -118,10 +118,10 @@
         </div>
     </div>
     </div>
-    <div class="window" id="vorpet" style="display: none">
+    <div class="window" id="vorpet" style="display: flex">
       <div class="windowheader" id="vorpetheader" style="background-color: rgb(188, 122, 255);">
         <div style="display: flex; align-items: center; gap: 16px;"> 
-          <img src="images/aboutueicon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px; margin-left: 8px">
+          <img src="images/vorpeticon.png" width="48px" height="48px" style="border: solid; border-radius: 16px; border-width: 2px; margin-left: 8px">
           VorPet (Scrollable)
         </div>
         <p class="closebutton" id="vorpetclose">
@@ -129,7 +129,24 @@
         </p>
       </div>
       <h1 style="color: rgb(188, 122, 255); margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 16px">VorPet Management</h1>
-      <img style="width: 480px; height: 270px; border-radius: 32px; box-shadow: 0 0 0 4px rgb(116, 255, 146); object-fit: contain; margin-left: 32px; margin-right: 32px; margin-top: 16px; margin-bottom: 32px; padding: 2px" src="images/screenshotlevel10.jpeg" />
+      <div style="display: flex">
+        <div style="width: 50%">
+          <img src="images/vorpets/vorpet_purple.png" class="vorpet" id="vortexpet" width="500px" height="500px">
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; width: 50%; gap: 16px">
+          <div class="button" id="changevorpetpurple" style="display: flex; justify-content: center; align-items: center; background-color: rgb(208, 158, 255); width: 36%; height: 8%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+            <p style="text-align: center; color: black">Void Purple</p>
+          </div>
+          <div class="button" id="changevorpetorange" style="display: flex; justify-content: center; align-items: center; background-color: rgb(255, 175, 100); width: 36%; height: 8%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+            <p style="text-align: center; color: black">Ignis Orange</p>
+          </div>
+          <div class="button" id="changevorpetblue" style="display: flex; justify-content: center; align-items: center; background-color: rgb(100, 211, 255); width: 36%; height: 8%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+            <p style="text-align: center; color: black">Ocean Blue</p>
+          </div>
+          <div class="button" id="changevorpetgreen" style="display: flex; justify-content: center; align-items: center; background-color: rgb(100, 255, 108); width: 36%; height: 8%; margin-left: 16px; margin-right: 16px; cursor: pointer">
+            <p style="text-align: center; color: black">Natural Green</p>
+          </div>
+        </div>
     </div>
   </body>
 </html>

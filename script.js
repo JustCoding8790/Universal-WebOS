@@ -17,12 +17,19 @@ var voidEntry = document.querySelector("#voidentry")
 var plainsEntry = document.querySelector("#plainsentry")
 var coastEntry = document.querySelector("#coastentry")
 
+var fedItems = 0;
+var hunger = 0;
+var vortexPet = document.querySelector("#vortexpet")
+var changeVorPur = document.querySelector("#changevorpetpurple")
+var changeVorOra = document.querySelector("#changevorpetorange")
+var changeVorBlu = document.querySelector("#changevorpetblue")
+var changeVorGre = document.querySelector("#changevorpetgreen")
+
 makeWindow("welcome")
 makeWindow("notebook")
 makeWindow("vorpet")
 
 // Making windows
-
 function makeWindow(windowName) {
   var screen = document.querySelector("#" + windowName)
   addWindowTapHandling(screen)
@@ -64,7 +71,6 @@ function handleIconTap(element, window) {
 }
 
 // Natural Notebook Entry Management
-
 function changeEntry() {
   if (prevEntry == 0) {
     voidEntry.style.display = "none"
@@ -111,6 +117,23 @@ notebookBackButton.addEventListener("click", function() {
     entryNum = 2;
   }
   changeEntry();
+});
+
+// Vorpet Management
+changeVorPur.addEventListener("click", function() {
+  vortexPet.src = "images/vorpets/vorpet_purple.png";
+});
+
+changeVorOra.addEventListener("click", function() {
+  vortexPet.src = "images/vorpets/vorpet_orange.png";
+});
+
+changeVorBlu.addEventListener("click", function() {
+  vortexPet.src = "images/vorpets/vorpet_blue.png";
+});
+
+changeVorGre.addEventListener("click", function() {
+  vortexPet.src = "images/vorpets/vorpet_green.png";
 });
 
 // Moving windows to top
